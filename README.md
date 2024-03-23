@@ -20,3 +20,6 @@ Request: [
     "Accept-Language: en-US,en;q=0.9",
 ]
 ```
+### COMMIT 2: return html response
+At first, the `handle_connection` function does the same thing as before (commit 1). However, instead of just printing the `http_request`, it constructs and sends an http response. It first defines the http status line for a successful response, which is "HTTP/1.1 200 OK" in the variable `status_line`. Then, it reads the content of the file named `hello.html` in the root directory as a string to the variable named `contents`. After that, the length of said content is calculated, stored into the variable named `length`. The response is then constructed with the format `"{status_line}\r\nContent-Length: {length}\r\n\r\n{contents}"`. Then, the function sends the response to the client through the TCP stream.
+![Commit 2 screen capture](/assets/images/commit2.png)
