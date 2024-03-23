@@ -1,6 +1,7 @@
 # advprog-modul6
-## Reflection 1
-The `handle_connection` function wraps the input stream with a buffer reader. It then reads the stream per line (separated by newlines) through the reader, extracting the value of the result, only taking the non-empty lines, refering them with `http_request` variable.
+## Reflections
+### COMMIT 1: handle-connection, check response
+The `handle_connection` function wraps the input stream with a buffer reader. It then reads the stream per line (separated by newlines) through the reader. Then, the value from the line is extracted. Only non-empty lines will be collected. They are referred by the `http_request` variable. Then, the function will print what is referred by `http_request` variable.
 ```
 Request: [
     "GET / HTTP/1.1",
