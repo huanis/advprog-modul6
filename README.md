@@ -55,3 +55,4 @@ fn handle_connection(mut stream: TcpStream) {
 }
 ```
 We did refactoring to the above code as all lines are duplicated lines in the if and else blocks. The only differences between the two blocks are the status_line and the html file used as the response' content. We extract the duplicated lines from the if-else block. Inside the if-else blocks, they only define the status_line and html file name. The reason we needed to refactor this is in consideration that if duplicated code contains a bug, the same bug appears multiple times. Therefore, duplicated code is takes more time to maintain as we need to repeat the same fix multiple times.
+![Commit 3 screen capture](/assets/images/commit3.png)
